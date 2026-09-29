@@ -229,10 +229,10 @@ for x, y in train_loader:
     train_loss[count] = loss.item()
 
 
-optimizer.zero_grad()
-loss.backward()
-optimizer.step()
-count += 1
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    count += 1
 
 print("epoch", epoch, "|", "step", count, "|", loss.item())
 

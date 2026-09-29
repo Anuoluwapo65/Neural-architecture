@@ -171,10 +171,10 @@ for epoch in range(RNNConfig.epoch):
 
 
 
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
-    count += 1
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        count += 1
 
 
 print("epoch", epoch, "|", "step", count, "|", "Train Loss:", loss.item())
@@ -195,4 +195,4 @@ for x, y in val_loader:
 print("epoch", epoch, "|", "step:", count, "|", "val_loss:", loss.item())
 model.train()
 
-print("epoch", epoch, "|", "Train Loss:", train_losses.mean(), "|", "val_loss:", val_loss.mean())
+print("epoch", epoch, "|","step", count, "|", "Train Loss:", train_losses.mean(), "|", "val_loss:", val_loss.mean())
